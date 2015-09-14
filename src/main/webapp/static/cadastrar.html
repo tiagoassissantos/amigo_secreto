@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amigoo Secreto - Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/cadastrar.js"></script>
+</head>
+
+<body ng-app="cadastro">
+<div id="container" ng-controller="CadastroController as controller">
+
+    <h1>Cadastro de Pessoas</h1>
+
+    <a href="{{path}}/static/index.html">Página Inicial</a>
+    <br><br>
+
+    <div id="messages"></div>
+
+    <form class="form-inline" accept-charset="UTF-8" ng-submit="save()">
+
+        <div id="name-group" class="form-group">
+            <label>Nome</label>
+            <input type="text" name="name" class="form-control" placeholder="Nome" ng-model="person.name">
+            <span class="help-block"></span>
+        </div>
+
+        <div id="email-group" class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" placeholder="email" ng-model="person.email">
+            <span class="help-block"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-lg btn-block">Cadastrar</button>
+
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amigo Secreto</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+</head>
+
+<body>
+<div id="container" ng-app="amigoSecreto" ng-controller="AmigoSecretoController as controller">
+    <h1>Amigo Secreto</h1>
+
+    <a href="{{path}}/static/cadastrar.html">Cadastrar Pessoa</a>
+    <a href="{{path}}/static/sorteio.html" style="float: right">Realizar Sorteio</a>
+    <br><br>
+    <table id="tbl-persons" class="table table-bordered">
+        <thead>
+        <tr>
+            <td>Nome</td>
+            <td>e-mail</td>
+        </tr>
+        </thead>
+
+        <tbody ng-repeat="person in persons">
+        <tr>
+            <td>{{person.name}}</td>
+            <td>{{person.email}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

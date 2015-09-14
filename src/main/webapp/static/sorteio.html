@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amigoo Secreto - Sorteio</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/sorteio.js"></script>
+</head>
+
+<body ng-app="sorteio">
+<div id="container" ng-controller="SorteioController as controller">
+
+    <h1>Sorteio</h1>
+
+    <a href="{{path}}/static/index.html">Página Inicial</a>
+    <br><br>
+
+    <div id="messages"></div>
+
+    <ul>
+        <li ng-repeat="person in persons">
+            {{person.name}} saiu com {{person.friendName}}
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
